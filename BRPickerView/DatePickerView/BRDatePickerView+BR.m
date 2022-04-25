@@ -515,6 +515,9 @@ BRSYNTH_DUMMY_CLASS(BRDatePickerView_BR)
     if (self.isShowToday && mSelectDate.br_year == [NSDate date].br_year && mSelectDate.br_month == [NSDate date].br_month && [dayString integerValue] == [NSDate date].br_day) {
         return [NSBundle br_localizedStringForKey:@"今天" language:self.pickerStyle.language];
     }
+    if (self.isShowTomorrow && mSelectDate.br_year == [NSDate date].br_year && mSelectDate.br_month == [NSDate date].br_month && [dayString integerValue] == ([NSDate date].br_day + 1)) {
+        return @"次日";
+    }
     NSString *dayUnit = self.showUnitType == BRShowUnitTypeAll ? [self getDayUnit] : @"";
     dayString = [NSString stringWithFormat:@"%@%@", dayString, dayUnit];
     if (self.isShowWeek) {

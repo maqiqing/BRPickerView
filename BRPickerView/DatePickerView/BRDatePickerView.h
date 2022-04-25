@@ -98,6 +98,9 @@ typedef void (^BRDateResultBlock)(NSDate * _Nullable selectDate, NSString * _Nul
 /** 是否显示【今天】，默认为 NO */
 @property (nonatomic, assign, getter=isShowToday) BOOL showToday;
 
+/** 是否显示【次日】，默认为 NO */
+@property (nonatomic, assign, getter=isShowTomorrow) BOOL showTomorrow;
+
 /** 是否添加【至今】，默认为 NO */
 @property (nonatomic, assign, getter=isAddToNow) BOOL addToNow;
 
